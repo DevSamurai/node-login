@@ -9,7 +9,7 @@ export async function getValue(key: string): Promise<object | undefined> {
 
   if (!value) return
 
-  return JSON.stringify(value) as unknown as object
+  return JSON.parse(value) as unknown as object
 }
 
 export async function setValue(
